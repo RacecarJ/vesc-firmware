@@ -1,5 +1,5 @@
 # VESC Configurations
-This is the current configuration from the University of Pennsylvania for configuring the VESC MkIV.
+This is the current configuration from the University of Pennsylvania for configuring the VESC MkIII.
 
 Configurations for older versions of the VESC hardware are in the older_configs directory.
 
