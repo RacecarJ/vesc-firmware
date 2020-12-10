@@ -1,11 +1,11 @@
 # vesc-firmware
-Firmware and configuration files for Vedder electronic speed controller VESC MkIV.
+Firmware and configuration files for Vedder electronic speed controller VESC MkV.
 
 Convenience repository for VESC firmware and configuration files for RACECAR/J.
 
-The firmware and configuration file are version 5.01 of the firmware.
+The firmware and configuration file are version 5.02 of the firmware.
 
-There is a configuration file for for VESC 6 Plus in the VESC-Configuration/VESC-6-Plus-30k.xml.
+There is a configuration file for for VESC 6 in the VESC-Configuration/vesc6_upenn_foc.xml.
 
 <h3>How firmware is built</h3>
 
@@ -14,6 +14,8 @@ https://github.com/vedderb/bldc Before building, you will need to change a param
 
 <blockquote>
 $ git clone https://github.com/vedderb/bldc.git 
+</blockquote>
+<blockquote>
 $ cd bldc
 </blockquote>
 
@@ -40,7 +42,7 @@ You can then upload this to the VESC using the VESC tool.
 
 <h4>November 2020</h4>
 
-* The VESC 6 MkV has been released, but the master branch has not been updated in the Vedder bldc repository.
+* The VESC 6 MkV has been released, but the master branch has not been updated in the Vedder bldc repository. This compilation is from the dev_fw_5_02 branch.
 
 <h4>September 2020</h4>
 
