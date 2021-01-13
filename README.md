@@ -1,19 +1,46 @@
 # vesc-firmware
-Firmware and configuration files for Vedder electronic speed controller VESC MkIV.
+Firmware and configuration files for the Vedder Electronic Speed Controller (VESC) firmware version 5.02. There are firmware builds for the VESC6 MkIII, MkIV, and MkV. See releases for previous versions.
 
-Convenience repository for VESC firmware and configuration files for RACECAR/J.
+This is a convenience repository for VESC firmware and configuration files for RACECAR/J.
 
-The firmware and configuration file are version 5.01 of the firmware.
+There is a configuration file for for VESC 6 in the VESC-Configuration/vesc6_upenn_foc.xml.
 
-There is a configuration file for for VESC 6 Plus in the VESC-Configuration/VESC-6-Plus-30k.xml.
+<h3>Quick install instructions</h3>
+This firmware may be flashed using the vesc-tool: https://vesc-project.com/vesc_tool version 3.00. Earlier version of the VESC Tool will upload the firmware, but will not interact with it properly.
 
-<h3>How firmware is built</h3>
+It may be necessary to download the bootloader to the VESC. The bootloader is available in the VESC Tool, Firmware->Bootloader. 
+
+<h4>Bootloader installation instructions</h4>
+
+* Connect your VESC via USB to your host computer. Power on the VESC.
+* Open the VESC Tool.
+* Click Autoconnect.
+* Go to the Firmware section on the left.
+* Go to the Bootloader tab at the top.
+* Click the Upload button in the bottom-right.
+* Click "Write Motor Configuration".
+* Click "Write App Configuration".
+
+<h4>Firmware Installation</h4>
+
+* Connect your VESC via USB to your host computer. Power on the VESC.
+* Click Autoconnect.
+* Go to the Firmware section on the left
+* Go to the Custom File tab.
+* Click the folder icon and browse to the appropriate VESC_TOOL folder and firmware binary for your VESC.
+* Click the Upload button in the bottom-right.
+
+Once this is complete, wait at least 10 seconds before re-connecting to configure additional parameters.
+
+<h3>How the firmware is built</h3>
 
 The general instructions for building the firmware are on the Vedder Github account, bottom of the page:
 https://github.com/vedderb/bldc Before building, you will need to change a parameter which tells the firmware to use the PPM port to as an output. We use that to control the steering servo.
 
 <blockquote>
 $ git clone https://github.com/vedderb/bldc.git 
+</blockquote>
+<blockquote>
 $ cd bldc
 </blockquote>
 
@@ -30,17 +57,24 @@ then you are ready to build:
 $ make
 </blockquote>
 
-The resulting firmware file is inside the "build" directory: BLDC_4_ChibiOS.bin
+You will also need to enable the correct version of the hardware from the list of #defines. For example the current default in conf_general.h is:
+<blockquote>
+#define HW60_IS_MK5</blockquote>
 
-Typically this is renamed to VESC_servoout.bin
+Indicating that the firmware build will be for a VESC6 MkV.
+
+The resulting firmware file after the build will be inside the "build" directory: BLDC_4_ChibiOS.bin
+
+Typically you will rename this to something more descriptive.
 
 You can then upload this to the VESC using the VESC tool.
 
 <h3>Notes</h3>
 
-<h4>November 2020</h4>
+<h4>January 2021</h4>
 
-* The VESC 6 MkV has been released, but the master branch has not been updated in the Vedder bldc repository.
+* This is for version 5.02 of the VESC firmware. There are versions for the VESC6 MkIII, MkIV, and MkV. 
+* Install with VESC Tool Version 3.0+  https://vesc-project.com/vesc_tool
 
 <h4>September 2020</h4>
 
