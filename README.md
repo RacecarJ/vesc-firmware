@@ -1,5 +1,5 @@
 # vesc-firmware
-Firmware and configuration files for the Vedder Electronic Speed Controller (VESC) firmware version 5.02. There are firmware builds for the VESC6 MkIII, MkIV, and MkV. 
+Firmware and configuration files for the Vedder Electronic Speed Controller (VESC) firmware version 5.02. There are firmware builds for the VESC6 MkIII, MkIV, and MkV. See releases for previous versions.
 
 This is a convenience repository for VESC firmware and configuration files for RACECAR/J.
 
