@@ -7,6 +7,32 @@ The firmware and configuration file are version 5.02 of the firmware.
 
 There is a configuration file for for VESC 6 in the VESC-Configuration/vesc6_upenn_foc.xml.
 
+<h3>Quick install instructions</h3>
+This firmware may be flashed using the vesc-tool: https://vesc-project.com/vesc_tool version 3.00.
+
+In the case of the VESC6 MkV, it may be necessary to download the bootloader to the VESC. The bootloader is available in the VESC Tool, Firmware->Bootloader. 
+
+<h4>Bootloader installation instructions</h4>
+
+Connect your VESC via USB to your host computer.
+Open the appropriate version of the VESC Tool.
+Click Autoconnect.
+Go to the Firmware section on the left.
+Go to the Bootloader tab at the top.
+Click the Upload button in the bottom-right.
+Click "Write Motor Configuration".
+Click "Write App Configuration".
+
+<h4>Firmware Installation</h4>
+Connect your VESC via USB to your host computer.
+Click Autoconnect.
+Go to the Firmware section on the left
+Go to the Custom File tab.
+Click the folder icon and browse to the appropriate VESC_TOOL folder and firmware binary for your VESC.
+Click the Upload button in the bottom-right.
+Once this is complete, wait at least 10 seconds before re-connecting to configure additional parameters.
+
+
 <h3>How firmware is built</h3>
 
 The general instructions for building the firmware are on the Vedder Github account, bottom of the page:
@@ -40,9 +66,10 @@ You can then upload this to the VESC using the VESC tool.
 
 <h3>Notes</h3>
 
-<h4>November 2020</h4>
+<h4>January 2021</h4>
 
-* The VESC 6 MkV has been released, but the master branch has not been updated in the Vedder bldc repository. This compilation is from the dev_fw_5_02 branch.
+* This is for version 5.02 of the VESC firmware. There are versions for the VESC6 MkIII, MkIV, and MkV. 
+* Install with VESC Tool Version 3.0+  https://vesc-project.com/vesc_tool
 
 <h4>September 2020</h4>
 
