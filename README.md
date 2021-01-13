@@ -6,9 +6,9 @@ This is a convenience repository for VESC firmware and configuration files for R
 There is a configuration file for for VESC 6 in the VESC-Configuration/vesc6_upenn_foc.xml.
 
 <h3>Quick install instructions</h3>
-This firmware may be flashed using the vesc-tool: https://vesc-project.com/vesc_tool version 3.00.
+This firmware may be flashed using the vesc-tool: https://vesc-project.com/vesc_tool version 3.00. Earlier version of the VESC Tool will upload the firmware, but will not interact with it properly.
 
-In the case of the VESC6 MkV, it may be necessary to download the bootloader to the VESC. The bootloader is available in the VESC Tool, Firmware->Bootloader. 
+It may be necessary to download the bootloader to the VESC. The bootloader is available in the VESC Tool, Firmware->Bootloader. 
 
 <h4>Bootloader installation instructions</h4>
 
